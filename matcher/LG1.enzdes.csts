@@ -13,8 +13,8 @@ CST::BEGIN
   CONSTRAINT::  angle_B:    120.0 25.0   500.0   360  1
   CONSTRAINT::  torsion_B:  180.0 25.0  500.0   360   1
   CONSTRAINT::  torsion_AB:  180.0 25.0  10.0   360   0
-  CONSTRAINT::  torsion_A:  -40.0 25.0  10.0   360    0
-
+  CONSTRAINT::  torsion_A:  -40.0 25.0  10.0   360    0  #this last column changes the number of samples within the cst limits
+# Dont need these lines for cst 1 
 #  ALGORITHM_INFO:: match 
 #  IGNORE_UPSTREAM_PROTON_CHI #ignore upstream (lig) proton chi
 #  ALGORITHM_INFO::END
@@ -36,9 +36,9 @@ CST::BEGIN
   CONSTRAINT::  torsion_B:  -180.0 25.0        500.0   180   # 1 shouldnt' be used in the secondardy matcher anyways
   CONSTRAINT::  torsion_A:  60.0 25.0        500.0   180   # 1 shouldnt' be used in the secondardy matcher anyways
 
-#  ALGORITHM_INFO:: match 
-#  SECONDARY_MATCH: DOWNSTREAM
-#  ALGORITHM_INFO::END
+  ALGORITHM_INFO:: match 
+  SECONDARY_MATCH: DOWNSTREAM
+  ALGORITHM_INFO::END
 
 
 CST::END
