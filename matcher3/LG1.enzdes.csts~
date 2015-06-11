@@ -1,0 +1,70 @@
+# Chemical constraints for bagel with 4-nitrophenyl-beta-glucopyranoside
+# Alex Carlin, Siegel Lab, UCD
+#mod sjb 5-31-15 for matching
+# Glu 353 to LG1
+
+CST::BEGIN
+
+  TEMPLATE::    ATOM_MAP:   1     atom_name: C5 O2 C4
+  TEMPLATE::    ATOM_MAP:   1     residue3: LG1
+
+  TEMPLATE::    ATOM_MAP:   2     atom_name: OE2 CD CG
+  TEMPLATE::    ATOM_MAP:   2     residue1: E 
+
+  CONSTRAINT::  distanceAB: 2.3   0.2   500.0    1      0  #   0
+  CONSTRAINT::  angle_A:    178.0 10.0   500.0   360    0  #   0
+  CONSTRAINT::  angle_B:    115.0 10.0   500.0   360    0  #  0
+  CONSTRAINT::  torsion_B:  -173.0 10.0  500.0   360     1  #  0
+  CONSTRAINT::  torsion_AB:  162.0 10.0  10.0    360    1  #   0
+  CONSTRAINT::  torsion_A:  -42.0 10.0  10.0     360     1  #  0
+
+CST::END
+
+# Glu 164 to LG1
+
+CST::BEGIN
+
+  TEMPLATE::    ATOM_MAP:   1     atom_name:  O2 C7 C9
+  TEMPLATE::    ATOM_MAP:   1     residue3:   LG1
+
+  TEMPLATE::    ATOM_MAP:   2     atom_name:  OE2 CD CG
+  TEMPLATE::    ATOM_MAP:   2     residue1:   E
+
+  CONSTRAINT::  distanceAB: 3.0  0.2       500.0   0          0
+  CONSTRAINT::  angle_A:    122.0 10.0         500.0   360    0
+  CONSTRAINT::  angle_B:    115.0 10.0         500.0   360    0
+  CONSTRAINT::  torsion_AB:  26.0 10.0        500.0   360     1
+  CONSTRAINT::  torsion_B:  170.0 10.0        500.0   360     1
+  CONSTRAINT::  torsion_A:  -128.0 10.0        500.0   360    1
+
+  ALGORITHM_INFO:: match 
+  SECONDARY_MATCH: DOWNSTREAM
+  ALGORITHM_INFO::END
+
+
+CST::END
+
+# Tyr 295 to glu 
+
+CST::BEGIN
+
+  TEMPLATE::    ATOM_MAP:   1   atom_name: OE2 CD CG
+  TEMPLATE::    ATOM_MAP:   1   residue1: E
+  TEMPLATE::    ATOM_MAP:   1  identical  1 2
+
+  TEMPLATE::    ATOM_MAP:   2   atom_type: OH
+  TEMPLATE::    ATOM_MAP:   2   residue1: Y
+
+  CONSTRAINT:: distanceAB: 2.8 0.2           500.0     0     0 #changed to non covalent, 
+  CONSTRAINT::  angle_A:    70.0 10.0         500.0   360    0
+  CONSTRAINT::  angle_B:    127.0 10.0         500.0   360    0
+  CONSTRAINT::  torsion_AB:  -50.0 10.0        500.0   360   1
+  CONSTRAINT::  torsion_B:  -32.0 10.0        500.0   180      1 # or 150
+  CONSTRAINT::  torsion_A:  -84.0 10.0        500.0   360     1
+  
+
+  ALGORITHM_INFO:: match
+  SECONDARY_MATCH: UPSTREAM_CST 1
+  ALGORITHM_INFO::END
+
+CST::END
