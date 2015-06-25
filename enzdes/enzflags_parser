@@ -9,12 +9,12 @@
 
 
 ###LIGAND SETUP###
--extra_res_fa /home/bertolan/work/book_chapter_matcher/matcher/LG1.params
+-extra_res_fa ../matcher/LG1.params
 #Only does torsions moving in ligand
 -enzdes::minimize_all_ligand_torsions 5.0
 #Moved ALL ligand torsions
 -enzdes::detect_design_interface
--enzdes::cstfile /home/bertolan/work/book_chapter_matcher/matcher/LG1.enzdes.csts
+-enzdes::cstfile ../matcher/LG1.enzdes.cst
 -ligand::old_estat
 #Add hack_elec 0.25 to weights file
 
@@ -26,7 +26,7 @@
 -packing::ex2aro
 -packing::extrachi_cutoff 1
 -packing::use_input_sc
-#-packing::unboundrot WT_1.pdb
+
 -packing::flip_HNQ
 -packing::no_optH false
 -packing::optH_MCA false
