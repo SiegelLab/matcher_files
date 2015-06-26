@@ -8,4 +8,4 @@
 #$ -v ROSETTA_BIN
 #$ -v ROSETTA_DB
 
-$ROSETTA_BIN/match.default.linuxgccrelease -database $ROSETTA_DB -s 2jie.renumber.pdb -match:lig_name LG1 -match:scaffold_active_site_residues positions -match:geometric_constraint_file LG1.enzdes.cst -extra_res_fa LG1.params  -mute protocols.idealize -use_input_sc -ex1 -ex2 -ex3 -bump_tolerance 0.4 -ex1aro -ex2aro -ignore_unrecognized_res T -use_input_sc -consolidate_matches T -output_matches_per_group 1 -match_grouper SameSequenceGrouper
+$ROSETTA_BIN/match.default.linuxgccrelease -database $ROSETTA_DB -s 2jie.renumbered.pdb -match:lig_name LG1 -match:scaffold_active_site_residues positions.pos -match:geometric_constraint_file LG1.enzdes.cst -extra_res_fa LG1.params  -mute protocols.idealize -use_input_sc -ex1 -ex2 -ex3 -bump_tolerance 0.4 -ex1aro -ex2aro -ignore_unrecognized_res T -use_input_sc -consolidate_matches T -output_matches_per_group 1 -match_grouper SameSequenceGrouper
