@@ -17,7 +17,7 @@ By Steve J. Bertolani,
 |File			| Details 				|
 |-----------|:-------------------:|
 |2jie.pdb		|>original crystal structure|
-|2jie.renumber.pdb	|>renumbered to start at 1|
+|2jie.renumbered.pdb	|>renumbered to start at 1|
 |LG1.conf.pdb		|>Alternate conformations for the ligand|
 |LG1.enzdes.cst		|>Functional constraints for this chemical activity|
 |LG1.mol2		|>The original mol2 file of just the ligand, used to create LG1.params and LG1_0001.pdb|
