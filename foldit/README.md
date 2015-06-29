@@ -1,7 +1,10 @@
 # These files are used in Foldit to test reverting mutations
 
 This folder contains a set of files that can be opened in 
-Foldit. These files are used in the Foldit section of the following:
+Foldit. These files are the same as found in the matcher and enzdes folders.
+They are grouped together here for convenience. The lowest energy
+design from the enzyme design step (UM_13_E353E164Y295_2jie_LG1_1_0001.pdb)
+was renamed for convenience to lowe.pdb
 
 Please see the book chapter in Methods in Molecular Biology:
 "Design and creation of novel Ligand Binding Proteins"
