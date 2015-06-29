@@ -12,23 +12,6 @@
      </TASKOPERATIONS>
      <FILTERS>
                <EnzScore name="allcst" score_type=cstE scorefxn=myscore whole_pose=1 energy_cutoff=10000000000000000000/>
-               EnzScore name="crs1" score_type=total_score scorefxn=myscore cstid=1B energy_cutoff=1/>
-               EnzScore name="crs2" score_type=total_score scorefxn=myscore cstid=2B energy_cutoff=1/>
-               EnzScore name="crs3" score_type=total_score scorefxn=myscore cstid=3B energy_cutoff=1/>
-               EnzScore name="crs4" score_type=total_score scorefxn=myscore cstid=4B energy_cutoff=1/>
-               <LigInterfaceEnergy name="interfE" scorefxn=myscore energy_cutoff=100000/>
-               RepackWithoutLigand name="rwl" scorefxn=myscore target_res=all_repacked rms_threshold=1.0/>
-               DiffAtomBurial name="pointingO1" res1_res_num=0 atomname1="C5" res2_res_num=0 atomname2="O2" sample_type="less"/>
-               CompoundStatement name="myfilter">
-                       AND filter_name="allcst"/>
-                       AND filter_name="interfE"/>
-                       AND filter_name="rwl"/>
-                       AND filter_name="crs1"/>
-                       AND filter_name="crs2"/>
-                       AND filter_name="crs3"/>
-                       AND filter_name="crs4"/>
-                       AND filter_name="pointingO1"/>
-               /CompoundStatement>
        </FILTERS>
 
      <MOVERS>
