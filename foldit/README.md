@@ -19,5 +19,7 @@ By Steve J. Bertolani,
 |LG1.conf.pdb		|>Alternate conformations for the ligand|
 |LG1.enzdes.cst		|>Functional constraints for this chemical activity|
 |LG1.params		|>Rosetta residue format file to treat the ligand in the scorefunction|
+|mutation_id.pl		|>Useful perl script to identify mutations, give a starting structure|
+|2jie.remumbered.pdb		|>renumbered crystal structure, starts at 1|
 
 
